@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+}
+.container nav ul {
+  list-style: none;
+  display: flex;
+  border-radius: 5px;
+}
+.container nav li {
+  text-align: center;
+  background: #222;
+  border-left: 1px solid #333;
+}
+.container nav li:first-child {
+  border-left: none;
+}
+.container nav li a {
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+.container nav li:hover a {
+  text-decoration: underline;
+}/*# sourceMappingURL=style.css.map */

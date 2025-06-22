@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    
+    nav {
+        ul {
+            list-style: none;
+            display: flex;
+            border-radius: 5px;
+        }
+
+        li {
+            text-align: center;
+            background: #222;
+            border-left: 1px solid #333;
+
+            &:first-child {
+                border-left: none;
+            }
+
+            a {
+                padding: 10px;
+                color: white;
+                text-decoration: none;
+            }
+
+            &:hover a {
+                text-decoration: underline;
+            }
+        }
+    }
+}
