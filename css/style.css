@@ -1,24 +1,24 @@
 .container {
-  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
 }
-.container nav ul {
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+}
+header .container nav ul {
   list-style: none;
   display: flex;
-  border-radius: 5px;
 }
-.container nav li {
+header .container nav ul li {
   text-align: center;
-  background: #222;
-  border-left: 1px solid #333;
 }
-.container nav li:first-child {
-  border-left: none;
-}
-.container nav li a {
-  padding: 10px;
-  color: white;
+header .container nav ul li a {
+  color: gray;
   text-decoration: none;
 }
-.container nav li:hover a {
+header .container nav ul li a:hover {
   text-decoration: underline;
+  color: orange;
 }/*# sourceMappingURL=style.css.map */
