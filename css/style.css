@@ -58,27 +58,23 @@ header .container .button input {
   height: 100%;
   width: 65%;
 }
-.my-section .container .info .social-media .social-link {
+.my-section .container .info .social-media {
   display: flex;
-  justify-content: left;
-  padding: 0;
 }
-.my-section .container .info .social-media .social-link li {
-  margin-right: 4%;
-  padding: 1.5%;
-  width: 20px;
-  height: 20px;
+.my-section .container .info .social-media a {
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: 1px solid rgb(75, 75, 75);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background: rgb(38, 38, 38);
-}
-.my-section .container .info .social-media .social-link li a {
   font-size: 20px;
   color: rgb(255, 255, 255);
   text-decoration: none;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .my-section .container .info .hi {
   color: gray;
@@ -96,53 +92,36 @@ header .container .button input {
 .my-section .container .info .buttons {
   margin: 0;
 }
-.my-section .container .info .buttons ul {
-  padding-left: 0;
-  list-style: none;
-  display: flex;
-  justify-content: left;
-}
-.my-section .container .info .buttons ul .button1 {
-  margin-right: 10%;
-}
-.my-section .container .info .buttons ul .button1 input {
+.my-section .container .info .buttons .button1 {
   background-color: var(--main);
   border: none;
   padding: 15px 30px;
   border-radius: 5px;
 }
-.my-section .container .info .buttons ul .button2 input {
-  background: #121212;
-  border: 2px solid rgb(156, 156, 156);
-  color: white;
-  padding: 14px 30px;
-  border-radius: 5px;
+.my-section .container .info .numbers-info {
+  display: flex;
 }
-.my-section .container .info .numbers-info ul {
-  list-style: none;
+.my-section .container .info .numbers-info .numbers-items {
+  background-color: rgb(61, 61, 61);
   display: flex;
   justify-content: left;
   color: aliceblue;
-  padding: 0;
-  margin: 0;
+  border-radius: 10px;
 }
-.my-section .container .info .numbers-info ul li {
-  position: relative;
-  padding: 0 4%;
+.my-section .container .info .numbers-info .numbers-items .stat-item {
+  margin: 10px;
+  border-left: 1px solid white;
 }
-.my-section .container .info .numbers-info ul li .numb {
+.my-section .container .info .numbers-info .numbers-items .stat-item .numb {
   color: var(--main);
-  text-align: center;
+  font-weight: bold;
 }
-.my-section .container .info .numbers-info ul li + li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 1px;
-  height: 50px;
-  background-color: white;
-  opacity: 0.5;
+.my-section .container .info .numbers-info .numbers-items .stat-item div {
+  padding-left: 20px;
+}
+.my-section .container .info .numbers-info .numbers-items .stat-item:first-child {
+  border-left: none;
+  margin-left: 0px;
 }
 .my-section .container .avatar {
   width: 35%;

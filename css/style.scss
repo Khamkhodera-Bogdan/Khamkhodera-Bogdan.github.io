@@ -68,33 +68,25 @@ header {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            height: 100%; 
+            height: 100%;
             width: 65%;
 
             .social-media {
-                .social-link {
+                display: flex;
+                a {
+                    margin-right: 10px;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    border: 1px solid rgb(75, 75, 75);
+                    background: rgb(38, 38, 38);
+                    font-size: 20px;
+                    color: rgb(255, 255, 255);
+                    text-decoration: none;
+                    box-sizing: border-box;
                     display: flex;
-                    justify-content: left;
-                    padding: 0;
-
-                    li {
-                        margin-right: 4%;
-                        padding: 1.5%;
-                        width: 20px;
-                        height: 20px;
-                        border-radius: 50%;
-                        border: 1px solid rgb(75, 75, 75);
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        background: rgb(38, 38, 38);
-
-                        a {
-                            font-size: 20px;
-                            color: rgb(255, 255, 255);
-                            text-decoration: none;
-                        }
-                    }
+                    align-items: center;
+                    justify-content: center;
                 }
             }
 
@@ -117,64 +109,45 @@ header {
             .buttons {
                 margin: 0;
 
-                ul {
-                    padding-left: 0;
-                    list-style: none;
-                    display: flex;
-                    justify-content: left;
-
-                    .button1 {
-                        margin-right: 10%;
-                        input {
-                            background-color: var(--main);
-                            border: none;
-                            padding: 15px 30px;
-                            border-radius: 5px;
-                        }
-                    }
-
-                    .button2 {
-                        input {
-                            background: #121212;
-                            border: 2px solid rgb(156, 156, 156);
-                            color: white;
-                            padding: 14px 30px;
-                            border-radius: 5px;
-                        }
-                    }
+                .button1 {
+                    background-color: var(--main);
+                    border: none;
+                    padding: 15px 30px;
+                    border-radius: 5px;
                 }
             }
 
             .numbers-info {
-                ul {
-                    list-style: none;
+                display: flex;
+
+                .numbers-items {
+                    background-color: rgb(61, 61, 61);
                     display: flex;
                     justify-content: left;
                     color: aliceblue;
-                    padding: 0;
-                    margin: 0;
+                    border-radius: 10px;
 
-                    li {
-                        position: relative;
-                        padding: 0 4%;
+                    .stat-item {
+                        margin: 10px;
+
+                        border-left: 1px solid white;
 
                         .numb {
                             color: var(--main);
-                            text-align: center;
+                            font-weight: bold;
                         }
 
-                        &+li::before {
-                            content: '';
-                            position: absolute;
-                            left: 0;
-                            top: 0;
-                            width: 1px;
-                            height: 50px;
-                            background-color: white;
-                            opacity: 0.5;
+                        div {
+                            padding-left: 20px;
                         }
                     }
+
+                    .stat-item:first-child {
+                        border-left: none;
+                        margin-left: 0px;
+                    }
                 }
+
             }
         }
 
