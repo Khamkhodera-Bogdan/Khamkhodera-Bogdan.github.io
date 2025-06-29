@@ -1,3 +1,11 @@
+:root {
+    --main: #f76d02;
+}
+
+body {
+    background-color: #121212;
+}
+
 .container {
     max-width: 1000px;
     margin: 0 auto;
@@ -7,10 +15,15 @@ header {
     .container {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+
         nav {
+            width: 60%;
+
             ul {
                 list-style: none;
                 display: flex;
+                justify-content: space-between;
 
                 li {
                     text-align: center;
@@ -21,10 +34,159 @@ header {
 
                         &:hover {
                             text-decoration: underline;
-                            color: orange;
+                            color: var(--main);
                         }
                     }
                 }
+
+            }
+        }
+
+        .logo {
+            color: var(--main);
+            font-size: 20px;
+        }
+
+        .button {
+            input {
+                background-color: var(--main);
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+.my-section {
+    .container {
+        display: flex;
+        height: 400px;
+        justify-content: space-between;
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%; 
+            width: 65%;
+
+            .social-media {
+                .social-link {
+                    display: flex;
+                    justify-content: left;
+                    padding: 0;
+
+                    li {
+                        margin-right: 4%;
+                        padding: 1.5%;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        border: 1px solid rgb(75, 75, 75);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background: rgb(38, 38, 38);
+
+                        a {
+                            font-size: 20px;
+                            color: rgb(255, 255, 255);
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+
+            .hi {
+                color: gray;
+                margin-top: 30px;
+            }
+
+            .name {
+                color: lightgrey;
+                font-size: 25px;
+            }
+
+            h1 {
+                color: var(--main);
+                font-size: 50px;
+                margin: 1px 0;
+            }
+
+            .buttons {
+                margin: 0;
+
+                ul {
+                    padding-left: 0;
+                    list-style: none;
+                    display: flex;
+                    justify-content: left;
+
+                    .button1 {
+                        margin-right: 10%;
+                        input {
+                            background-color: var(--main);
+                            border: none;
+                            padding: 15px 30px;
+                            border-radius: 5px;
+                        }
+                    }
+
+                    .button2 {
+                        input {
+                            background: #121212;
+                            border: 2px solid rgb(156, 156, 156);
+                            color: white;
+                            padding: 14px 30px;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+            }
+
+            .numbers-info {
+                ul {
+                    list-style: none;
+                    display: flex;
+                    justify-content: left;
+                    color: aliceblue;
+                    padding: 0;
+                    margin: 0;
+
+                    li {
+                        position: relative;
+                        padding: 0 4%;
+
+                        .numb {
+                            color: var(--main);
+                            text-align: center;
+                        }
+
+                        &+li::before {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 1px;
+                            height: 50px;
+                            background-color: white;
+                            opacity: 0.5;
+                        }
+                    }
+                }
+            }
+        }
+
+        .avatar {
+            width: 35%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                height: 400px;
+                width: auto;
             }
         }
     }

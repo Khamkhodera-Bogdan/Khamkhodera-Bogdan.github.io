@@ -1,3 +1,11 @@
+:root {
+  --main: #f76d02;
+}
+
+body {
+  background-color: #121212;
+}
+
 .container {
   max-width: 1000px;
   margin: 0 auto;
@@ -6,10 +14,15 @@
 header .container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+header .container nav {
+  width: 60%;
 }
 header .container nav ul {
   list-style: none;
   display: flex;
+  justify-content: space-between;
 }
 header .container nav ul li {
   text-align: center;
@@ -20,5 +33,124 @@ header .container nav ul li a {
 }
 header .container nav ul li a:hover {
   text-decoration: underline;
-  color: orange;
+  color: var(--main);
+}
+header .container .logo {
+  color: var(--main);
+  font-size: 20px;
+}
+header .container .button input {
+  background-color: var(--main);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.my-section .container {
+  display: flex;
+  height: 400px;
+  justify-content: space-between;
+}
+.my-section .container .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 65%;
+}
+.my-section .container .info .social-media .social-link {
+  display: flex;
+  justify-content: left;
+  padding: 0;
+}
+.my-section .container .info .social-media .social-link li {
+  margin-right: 4%;
+  padding: 1.5%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid rgb(75, 75, 75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(38, 38, 38);
+}
+.my-section .container .info .social-media .social-link li a {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.my-section .container .info .hi {
+  color: gray;
+  margin-top: 30px;
+}
+.my-section .container .info .name {
+  color: lightgrey;
+  font-size: 25px;
+}
+.my-section .container .info h1 {
+  color: var(--main);
+  font-size: 50px;
+  margin: 1px 0;
+}
+.my-section .container .info .buttons {
+  margin: 0;
+}
+.my-section .container .info .buttons ul {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  justify-content: left;
+}
+.my-section .container .info .buttons ul .button1 {
+  margin-right: 10%;
+}
+.my-section .container .info .buttons ul .button1 input {
+  background-color: var(--main);
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+}
+.my-section .container .info .buttons ul .button2 input {
+  background: #121212;
+  border: 2px solid rgb(156, 156, 156);
+  color: white;
+  padding: 14px 30px;
+  border-radius: 5px;
+}
+.my-section .container .info .numbers-info ul {
+  list-style: none;
+  display: flex;
+  justify-content: left;
+  color: aliceblue;
+  padding: 0;
+  margin: 0;
+}
+.my-section .container .info .numbers-info ul li {
+  position: relative;
+  padding: 0 4%;
+}
+.my-section .container .info .numbers-info ul li .numb {
+  color: var(--main);
+  text-align: center;
+}
+.my-section .container .info .numbers-info ul li + li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 50px;
+  background-color: white;
+  opacity: 0.5;
+}
+.my-section .container .avatar {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.my-section .container .avatar img {
+  height: 400px;
+  width: auto;
 }/*# sourceMappingURL=style.css.map */
