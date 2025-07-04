@@ -7,19 +7,26 @@ body {
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* або ваш власний розмір */
+    z-index: 1000; /* щоб бути над усім іншим */
+    background-color:#121212;
     .container {
+        font-style: italic;
         display: flex;
         justify-content: space-between;
         align-items: center;
 
         nav {
             width: 60%;
-
             ul {
                 list-style: none;
                 display: flex;
@@ -27,14 +34,14 @@ header {
 
                 li {
                     text-align: center;
-
                     a {
                         color: gray;
                         text-decoration: none;
-
+                    
                         &:hover {
                             text-decoration: underline;
                             color: var(--main);
+                            font-weight: bold;
                         }
                     }
                 }
@@ -49,19 +56,25 @@ header {
 
         .button {
             input {
+                box-shadow: inset 0 0 5px rgb(172, 75, 0);
                 background-color: var(--main);
                 border: none;
                 padding: 10px 20px;
                 border-radius: 5px;
+                transition: transform 0.2s ease;
+                &:hover{
+                    transform: scale(1.02);
+                }
             }
         }
     }
 }
 
 .my-section {
+    margin-top: 35px;
     .container {
         display: flex;
-        height: 400px;
+        height: 450px;
         justify-content: space-between;
 
         .info {
@@ -87,6 +100,13 @@ header {
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    transition: transform 1s ease;
+                    box-shadow:  0 0 5px rgb(87, 84, 81);
+                    
+                }
+                a:hover{
+                    transform: scale(1.1);
+                    background-color: rgb(52, 52, 52);
                 }
             }
 
@@ -108,30 +128,32 @@ header {
 
             .buttons {
                 margin: 0;
-
                 .button1 {
+                    box-shadow: inset 0 0 5px rgb(172, 75, 0);
                     background-color: var(--main);
                     border: none;
                     padding: 15px 30px;
                     border-radius: 5px;
+                    transition: transform 0.2s ease;
+                    &:hover{
+                        transform: scale(1.02);
+                    }
                 }
             }
 
             .numbers-info {
                 display: flex;
-
                 .numbers-items {
-                    background-color: rgb(61, 61, 61);
+                    background-color: rgba(97, 97, 97, 0.788);
                     display: flex;
                     justify-content: left;
                     color: aliceblue;
                     border-radius: 10px;
-
+                    box-shadow: inset 0 0 20px rgba(32, 32, 32, 0.6);
+                    
                     .stat-item {
-                        margin: 10px;
-
+                        margin: 10px 10px;
                         border-left: 1px solid white;
-
                         .numb {
                             color: var(--main);
                             font-weight: bold;
@@ -158,8 +180,158 @@ header {
             justify-content: center;
 
             img {
-                height: 400px;
+                height: 450px;
                 width: auto;
+                background: linear-gradient(
+                  to top,           
+                  rgba(103, 103, 103, 0.66) 0%,   
+                  rgba(255, 0, 0, 0) 30%   
+                );
+            }
+        }
+    }
+}
+
+.skills {
+  .container {
+    margin-top: 50px;
+
+    .cards {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: center;
+
+      div {
+        position: relative;
+        box-shadow: inset 0 0 20px rgba(32, 32, 32, 0.6);
+        font-weight: 300;
+        font-family: 'Inter', sans-serif;
+        font-size: 20px;
+        background-color: #373737;
+        flex: 1 1 150px;     // "1" — зростання, "1" — стиск, "150px" — бажаний мінімум
+        min-width: 120px;    // щоб кнопки не ставали занадто вузькими
+        height: 150px;
+        color: var(--main);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        transition: transform 0.5s ease,
+                    background-color 0.5s ease,
+                    color 0.5s ease;
+        transform-origin: center center;
+        i{
+            font-size: 50px;
+        }
+      }
+
+      div:hover {
+        transform: scale(1.05);
+        background-color: var(--main);
+        color: white;
+      }
+    }
+  }
+}
+.portfolio{
+    margin-top: 50px;
+    color: white;
+    .container{
+        h1{
+            text-align: center;
+        }
+        .text-and-image{
+            display: flex;
+            justify-content: space-between;
+            .about-me{
+                width: 50%;
+                
+                word-spacing: 10px;
+                line-height: 1.6;
+            }
+            .image{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 50%;
+
+                img{
+                    height: 480px;
+                    width: auto;
+                    background: linear-gradient(
+                        to top,           
+                        rgba(103, 103, 103, 0.66) 0%,   
+                        rgba(255, 0, 0, 0) 30%   
+                    );
+
+                }
+                
+            }
+        }
+   }
+}
+
+.comp {
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background: radial-gradient(circle, #ff6a00 10%, #121212 40%);
+    .container {
+        .competencies {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap; 
+
+            .competencie {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              width: 250px;
+              text-align: center;
+              margin-bottom: 20px;
+            
+              .img-wrapper {
+                position: relative;
+                width: 250px;
+                height: 450px;
+                overflow: hidden;
+            
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  display: block;
+                  border-top: 4px solid #a1a1a1;
+                }
+            
+                &::after {
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 50px;
+                  background: linear-gradient(to bottom, #58585886, transparent);
+                  pointer-events: none;
+                }
+              }
+          
+              a {
+                box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.6);
+                text-decoration: none;
+                color: white;
+                background: #373737;
+                width: 250px;
+                word-wrap: break-word;
+                white-space: normal;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                padding: 10px 5px;
+                box-sizing: border-box;
+              }
             }
         }
     }
